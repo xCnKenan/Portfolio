@@ -1,4 +1,4 @@
-@use "../../../styles.scss" as *;
+@use "../../../../styles.scss" as *;
 
 nav {
   position: sticky;
@@ -9,6 +9,7 @@ nav {
   height: 109.03px;
   padding-left: 100px;
   padding-right: 100px;
+  z-index: 999;
   > .link-section {
     display: flex;
     justify-content: end;
