@@ -1,0 +1,42 @@
+@use "../../../styles.scss" as *;
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 109.03px;
+  padding-left: 100px;
+  padding-right: 100px;
+  > .link-section {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 524px;
+    gap: 92px;
+    > .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 29px;
+      > a {
+        text-decoration: none;
+        font-size: 23px;
+        font-weight: 400;
+      }
+    }
+    > .language {
+      display: flex;
+      gap: 14px;
+      > span {
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 400;
+        border: 1px solid $secondColor;
+        padding: 5px 8px 5px 8px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
