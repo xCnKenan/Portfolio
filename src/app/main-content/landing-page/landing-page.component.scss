@@ -1,6 +1,10 @@
 @use "../../../styles.scss" as *;
 
 section {
+  // background-image: url("/assets/img/Vector.png");
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -8,7 +12,16 @@ section {
   width: 100vw;
   max-width: 100%;
   height: calc(100vh - 109.03px);
-  .mainInfo {
+  position: relative;
+
+  >.backgroundVector{
+    position: absolute;
+    width: 100%;
+    bottom: -900px;
+    background: transparent;
+  }
+
+  >.mainInfo {
     display: flex;
     justify-content: space-between;
     width: 100%;
