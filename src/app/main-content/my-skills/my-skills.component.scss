@@ -27,6 +27,9 @@
         width: 54px;
         height: 60px;
         object-fit: contain;
+        &:hover {
+          animation: bounce 1s ease;
+        }
       }
       > .elementSkill {
         text-align: center;
@@ -88,10 +91,9 @@
           cursor: pointer;
           transition: all 150ms ease-in-out;
           &:hover {
-          background-color: $thirdColor;
-          // padding: 20px 40px 20px 40px;
-          scale: (1.1);
-        }
+            background-color: $thirdColor;
+            scale: (1.1);
+          }
         }
       }
     }
@@ -120,4 +122,20 @@
   left: -600px;
   bottom: -550px;
   background: transparent;
+  pointer-events: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

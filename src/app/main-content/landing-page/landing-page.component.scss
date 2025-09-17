@@ -5,17 +5,12 @@
 }
 
 section {
-  // z-index: 1;
-  // background: transparent url('/assets/img/Vector.png') no-repeat;
-  // background-size: cover;
-  // background-position: top center;
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: transparent url('/assets/img/Vector.png') no-repeat;
+    background: transparent url("/assets/img/Vector.png") no-repeat;
     background-size: 100% auto;
-    // background-position: top center;
     background-repeat: no-repeat;
     z-index: 1;
   }
@@ -25,23 +20,13 @@ section {
   align-items: center;
   width: 100vw;
   max-width: 100%;
-  // height: calc(100vh - 109.03px);
   min-height: 100vh;
   position: relative;
-
-  // >.backgroundVector{
-  //   position: absolute;
-  //   width: 100%;
-  //   bottom: -900px;
-  //   background: transparent;
-  // }
 
   > .mainInfo {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    // position: relative;
-    // z-index: 1;
     > .imgOfCreator {
       display: flex;
       justify-content: center;
@@ -61,7 +46,7 @@ section {
 
     > .aboutSection {
       position: relative;
-    z-index: 1;
+      z-index: 1;
       padding-right: 100px;
       display: flex;
       flex-direction: column;
@@ -106,7 +91,6 @@ section {
         transition: all 150ms ease-in-out;
         &:hover {
           background-color: $thirdColor;
-          // padding: 20px 40px 20px 40px;
           scale: (1.1);
         }
       }
