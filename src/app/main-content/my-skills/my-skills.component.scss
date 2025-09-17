@@ -1,0 +1,117 @@
+@use "../../../styles.scss" as *;
+
+.skillsSection {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > .skills {
+    width: 664px;
+    height: 404px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 88px;
+    padding-left: 100px;
+    > .overviewSkills {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      gap: 10px;
+      width: 88px;
+      height: 101px;
+      > .skillImg {
+        width: 54px;
+        height: 60px;
+        object-fit: contain;
+      }
+      > .elementSkill {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 120%;
+      }
+    }
+  }
+
+  > .mySkills {
+    display: flex;
+    flex-direction: column;
+    width: 571px;
+    height: 400px;
+    padding-right: 100px;
+    position: relative;
+    > .info {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      > .headline {
+        font-size: 90px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+      }
+      > .context {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        text-align: end;
+        gap: 24px;
+        > span {
+          font-size: 16px;
+          line-height: 120%;
+        }
+        > .contextAnotherSkill {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          > .title {
+            span {
+              font-size: 32px;
+              font-weight: 700;
+            }
+          }
+          > .title {
+            font-size: 32px;
+            font-weight: 700;
+          }
+        }
+        > button {
+          border: none;
+          padding: 15px 30px 15px 30px;
+          font-size: 23px;
+          border-radius: 10px;
+          background-color: $secondColor;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.lastElement {
+  color: $thirdColor;
+}
+
+.line {
+  height: 4px;
+  width: 68px;
+  border-radius: 4px;
+  background-color: $thirdColor;
+  position: absolute;
+  right: 0;
+}
+
+.colorForParagraph {
+  color: $thirdColor;
+}
+
+.bgElement {
+  position: absolute;
+  left: -600px;
+  bottom: -550px;
+  background: transparent;
+}

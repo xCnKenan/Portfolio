@@ -1,1 +1,44 @@
-<p>my-skills works!</p>
+<section class="skillsSection">
+  <div class="skills">
+    @for(element of mySkills; track element; let index = $index){
+    <div class="overviewSkills">
+      <img class="skillImg" src="./assets/icons/{{ element.img }}" alt="" />
+      <span
+        [ngClass]="{ lastElement: index == mySkills.length - 1 }"
+        class="elementSkill"
+        >{{ element.skill }}</span
+      >
+    </div>
+    }
+  </div>
+
+  <div class="mySkills">
+    <div class="info">
+      <div class="headline">
+        <h3>My skills</h3>
+        <div class="line"></div>
+      </div>
+      <div class="context">
+        <span
+          >Show that you have used a variety of front-end technologies in your
+          projects.</span
+        >
+
+        <div class="contextAnotherSkill">
+          <div class="title">
+            <span> Looking for </span>
+            <span class="colorForParagraph">another skill</span>
+            <span>?</span>
+          </div>
+
+          <span>
+            Reveal enthusiasm for learning new technologies and frameworks.
+          </span>
+        </div>
+        <button>Get in touch</button>
+      </div>
+    </div>
+  </div>
+
+  <img class="bgElement" src="./assets/img/31. Green shadow Skills Portfolio.png" alt="">
+</section>
