@@ -86,6 +86,12 @@
           border-radius: 10px;
           background-color: $secondColor;
           cursor: pointer;
+          transition: all 150ms ease-in-out;
+          &:hover {
+          background-color: $thirdColor;
+          // padding: 20px 40px 20px 40px;
+          scale: (1.1);
+        }
         }
       }
     }
