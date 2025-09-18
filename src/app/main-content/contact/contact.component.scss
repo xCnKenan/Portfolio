@@ -76,6 +76,12 @@ section {
         border-radius: 10px;
         font-size: 16px;
         line-height: 120%;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          border: 1px solid $secondColor;
+        }
       }
       > .email {
         border: 1px solid $thirdColor;
@@ -83,6 +89,12 @@ section {
         border-radius: 10px;
         font-size: 16px;
         line-height: 120%;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          border: 1px solid $secondColor;
+        }
       }
       > .message {
         height: 202px;
@@ -91,6 +103,12 @@ section {
         border-radius: 10px;
         font-size: 16px;
         line-height: 120%;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          border: 1px solid $secondColor;
+        }
       }
     }
   }
@@ -104,4 +122,33 @@ section {
   border-radius: 10px;
   font-size: 23px;
   font-weight: 400;
+}
+
+.confirm {
+  display: flex;
+  > .default {
+    margin-right: 8px;
+    &:hover {
+      cursor: pointer;
+      background-color: $hoverCheckbox;
+      border-radius: 100%;
+    }
+  }
+  > .checked {
+    margin-right: 8px;
+    display: none;
+    &:hover {
+      cursor: pointer;
+      background-color: $hoverCheckbox;
+      border-radius: 100%;
+    }
+  }
+}
+
+.privacyPolicy {
+  text-decoration: none;
+  color: $thirdColor;
+  &:hover{
+    text-decoration: underline;
+  }
 }
