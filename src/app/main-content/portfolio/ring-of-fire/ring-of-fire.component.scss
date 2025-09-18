@@ -1,6 +1,7 @@
 @use "../../../../styles.scss" as *;
 
 section {
+  position: relative;
   width: 1168px;
   height: 339.19px;
   display: flex;
@@ -9,7 +10,18 @@ section {
     width: 620px;
     height: 339px;
     object-fit: contain;
+    z-index: 1;
+    background: transparent;
   }
+}
+
+.bgElement {
+  position: absolute;
+  left: -400px;
+  top: -200px;
+  background: transparent;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .moreInfo {
@@ -70,3 +82,5 @@ section {
     background-color: $secondColor;
   }
 }
+
+
