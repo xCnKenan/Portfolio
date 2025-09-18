@@ -4,6 +4,10 @@ section {
   height: 100vh;
   width: 100vw;
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
 }
 
 .title {
@@ -12,6 +16,7 @@ section {
   align-items: center;
   justify-items: end;
   gap: 32px;
+  width: 100%;
   > .lineLeft {
     width: 100px;
     height: 4px;
