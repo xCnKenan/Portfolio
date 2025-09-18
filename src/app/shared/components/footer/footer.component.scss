@@ -34,4 +34,10 @@ section {
   padding-right: 100px;
   display: flex;
   gap: 32px;
+  > a {
+    transition: all 150ms ease-in-out;
+    &:hover {
+      scale: (1.3);
+    }
+  }
 }

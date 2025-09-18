@@ -25,6 +25,10 @@ nav {
         text-decoration: none;
         font-size: 23px;
         font-weight: 400;
+        transition: all 150ms ease-in-out;
+        &:hover {
+          color: $secondColor;
+        }
       }
     }
     > .language {
