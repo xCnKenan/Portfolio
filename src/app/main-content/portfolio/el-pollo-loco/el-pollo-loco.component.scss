@@ -1,0 +1,72 @@
+@use "../../../../styles.scss" as *;
+
+section {
+  width: 1168px;
+  height: 339.19px;
+  display: flex;
+  justify-content: space-between;
+  > .projectDesign {
+    width: 620px;
+    height: 339px;
+    object-fit: contain;
+  }
+}
+
+.moreInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  gap: 35px;
+  width: 513px;
+  height: 339.19px;
+  > .project {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 15px;
+    > h5 {
+      font-size: 32px;
+      color: $thirdColor;
+      font-weight: 700;
+    }
+    > h6 {
+      font-size: 23px;
+      color: $secondColor;
+      font-weight: 400;
+    }
+    > .description {
+      font-size: 16px;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 86px;
+}
+
+.liveTest {
+  background-color: $thirdColor;
+  border: none;
+  padding: 15px 30px 15px 30px;
+  border-radius: 10px;
+  font-size: 23px;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+  &:hover {
+    background-color: $secondColor;
+  }
+}
+.gitHub {
+  border: 1px solid $secondColor;
+  padding: 15px 30px 15px 30px;
+  border-radius: 10px;
+  font-size: 23px;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+  &:hover {
+    background-color: $secondColor;
+  }
+}

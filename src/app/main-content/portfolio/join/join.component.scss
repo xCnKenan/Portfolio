@@ -4,7 +4,8 @@ section {
   width: 1168px;
   height: 339.19px;
   display: flex;
-  > img {
+  justify-content: space-between;
+  > .projectDesign {
     width: 620px;
     height: 339px;
     object-fit: contain;
@@ -22,6 +23,7 @@ section {
   > .project {
     display: flex;
     flex-direction: column;
+    align-items: start;
     gap: 15px;
     > h5 {
       font-size: 32px;
