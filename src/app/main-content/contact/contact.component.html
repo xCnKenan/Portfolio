@@ -19,7 +19,7 @@
     </div>
 
     <div class="contactForm">
-      <form class="form" (ngSubmit)="onSubmit()">
+      <form class="form" (ngSubmit)="onSubmit(contactForm)" #contactForm ="ngForm">
         <!-- <label for="fname">First Name</label> -->
         <input
           type="text"
@@ -28,6 +28,7 @@
           name="name"
           placeholder="Your name"
           [(ngModel)]="contactData.name"
+          required
         />
 
         <!-- <label for="lname">Last Name</label> -->
@@ -38,16 +39,23 @@
           class="email"
           placeholder="Your email"
           [(ngModel)]="contactData.email"
+          required
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
         />
 
         <!-- <label for="subject">Subject</label> -->
         <textarea
+          #message="ngModel"
           id="message"
           class="message"
           name="subject"
           placeholder="Your message"
           [(ngModel)]="contactData.message"
+          required
         ></textarea>
+        @if(!message.valid && message.touched && !message.disabled){
+          <span>Please enter a message</span>
+        }
 
         <div class="confirm">
           <!-- <input type="checkbox" name="" id="" /> -->
