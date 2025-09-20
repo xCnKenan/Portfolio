@@ -70,46 +70,86 @@ section {
       display: flex;
       flex-direction: column;
       gap: 32px;
-      > .name {
-        border: 1px solid $thirdColor;
-        padding: 15px 25px 15px 25px;
-        border-radius: 10px;
-        font-size: 16px;
-        line-height: 120%;
-        &:focus {
-          outline: none;
-        }
-        &:hover {
-          border: 1px solid $secondColor;
-        }
-      }
-      > .email {
-        border: 1px solid $thirdColor;
-        padding: 15px 25px 15px 25px;
-        border-radius: 10px;
-        font-size: 16px;
-        line-height: 120%;
-        &:focus {
-          outline: none;
-        }
-        &:hover {
-          border: 1px solid $secondColor;
-        }
-      }
-      > .message {
-        height: 202px;
-        border: 1px solid $thirdColor;
-        padding: 15px 25px 15px 25px;
-        border-radius: 10px;
-        font-size: 16px;
-        line-height: 120%;
-        &:focus {
-          outline: none;
-        }
-        &:hover {
-          border: 1px solid $secondColor;
-        }
-      }
+    }
+  }
+}
+
+.sectionName {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionEmail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nameInput {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  > .name {
+    border: 1px solid $thirdColor;
+    padding: 15px 25px 15px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 120%;
+    &:focus {
+      outline: none;
+      border: 1px solid $activeField;
+    }
+    &:hover {
+      border: 1px solid $activeField;
+    }
+  }
+}
+
+.emailInput {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .email {
+    border: 1px solid $thirdColor;
+    padding: 15px 25px 15px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 120%;
+    &:focus {
+      outline: none;
+      border: 1px solid $activeField;
+    }
+    &:hover {
+      border: 1px solid $activeField;
+    }
+  }
+}
+
+.messageField {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  > .message {
+    height: 202px;
+    border: 1px solid $thirdColor;
+    padding: 15px 25px 15px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 120%;
+    &:focus {
+      outline: none;
+      border: 1px solid $activeField;
+    }
+    &:hover {
+      border: 1px solid $activeField;
     }
   }
 }
@@ -148,7 +188,57 @@ section {
 .privacyPolicy {
   text-decoration: none;
   color: $thirdColor;
-  &:hover{
+  &:hover {
     text-decoration: underline;
   }
+}
+
+.error {
+  border: 1px solid $error !important;
+}
+
+.valid {
+  border: 1px solid $secondColor !important;
+}
+
+.errorInfo {
+  color: $error;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.validIcon {
+  position: absolute;
+  right: 25px;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.invalidIcon {
+  position: absolute;
+  right: 25px;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.validIconMessage {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+.invalidIconMessage {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
 }

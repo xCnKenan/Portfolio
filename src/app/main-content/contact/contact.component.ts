@@ -10,6 +10,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+
+
   constructor() {}
 
   contactData = {

@@ -19,46 +19,117 @@
     </div>
 
     <div class="contactForm">
-      <form class="form" (ngSubmit)="onSubmit(contactForm)" #contactForm ="ngForm">
-        <!-- <label for="fname">First Name</label> -->
-        <input
-          type="text"
-          class="name"
-          id="name"
-          name="name"
-          placeholder="Your name"
-          [(ngModel)]="contactData.name"
-          required
-        />
+      <form
+        class="form"
+        (ngSubmit)="onSubmit(contactForm)"
+        #contactForm="ngForm"
+      >
+        <div class="sectionName">
+          <div class="nameInput">
+            <input
+              #name="ngModel"
+              type="text"
+              class="name"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              [(ngModel)]="contactData.name"
+              required
+              [ngClass]="{
+                error: name.invalid && name.touched,
+                valid: !name.invalid && name.touched
+              }"
+            />
 
-        <!-- <label for="lname">Last Name</label> -->
-        <input
-          type="email"
-          id="email"
-          name="email"
-          class="email"
-          placeholder="Your email"
-          [(ngModel)]="contactData.email"
-          required
-          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-        />
+            <img
+              class="invalidIcon"
+              src="./assets/icons/invalid.png"
+              alt="valid"
+              *ngIf="name.invalid && name.touched"
+            />
+            <img
+              class="validIcon"
+              src="./assets/icons/valid.png"
+              alt="invalid"
+              *ngIf="!name.invalid && name.touched"
+            />
+          </div>
 
-        <!-- <label for="subject">Subject</label> -->
-        <textarea
-          #message="ngModel"
-          id="message"
-          class="message"
-          name="subject"
-          placeholder="Your message"
-          [(ngModel)]="contactData.message"
-          required
-        ></textarea>
-        @if(!message.valid && message.touched && !message.disabled){
-          <span>Please enter a message</span>
-        }
+          @if(!name.valid && name.touched && !name.disabled){
+          <span class="errorInfo">Your name is required</span>
+          }
+        </div>
+
+        <div class="sectionEmail">
+          <div class="emailInput">
+            <input
+              #email="ngModel"
+              type="email"
+              id="email"
+              name="email"
+              class="email"
+              placeholder="Your email"
+              [(ngModel)]="contactData.email"
+              required
+              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+              [ngClass]="{
+                error: email.invalid && email.touched,
+                valid: !email.invalid && email.touched
+              }"
+            />
+            <img
+              class="invalidIcon"
+              src="./assets/icons/invalid.png"
+              alt="valid"
+              *ngIf="email.invalid && email.touched"
+            />
+            <img
+              class="validIcon"
+              src="./assets/icons/valid.png"
+              alt="invalid"
+              *ngIf="!email.invalid && email.touched"
+            />
+          </div>
+          @if(!email.valid && email.touched && !email.disabled){
+          <span class="errorInfo">Your email is required</span>
+          }
+        </div>
+
+        <div class="sectionMessage">
+          <div class="messageField">
+            <textarea
+              #message="ngModel"
+              id="message"
+              class="message"
+              name="subject"
+              placeholder="Your message"
+              [(ngModel)]="contactData.message"
+              required
+              minlength="5"
+              [ngClass]="{
+                error: message.invalid && message.touched,
+                valid: !message.invalid && message.touched
+              }"
+            ></textarea>
+            <img
+              class="invalidIconMessage"
+              src="./assets/icons/invalid.png"
+              alt="valid"
+              *ngIf="message.invalid && message.touched"
+            />
+            <img
+              class="validIconMessage"
+              src="./assets/icons/valid.png"
+              alt="invalid"
+              *ngIf="!message.invalid && message.touched"
+            />
+          </div>
+          @if(!message.valid && message.touched && !message.disabled){
+          <span class="errorInfo">Your message is empty</span>
+          }
+        </div>
 
         <div class="confirm">
-          <!-- <input type="checkbox" name="" id="" /> -->
           <img class="default" src="./assets/icons/default.png" alt="" />
           <img class="checked" src="./assets/icons/checked.png" alt="" />
           <span
