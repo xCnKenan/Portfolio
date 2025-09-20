@@ -166,17 +166,11 @@ section {
 
 .confirm {
   display: flex;
-  > .default {
-    margin-right: 8px;
-    &:hover {
-      cursor: pointer;
-      background-color: $hoverCheckbox;
-      border-radius: 100%;
-    }
-  }
-  > .checked {
-    margin-right: 8px;
-    display: none;
+}
+
+.checkStatus {
+  margin-right: 8px;
+  > .iconStatus {
     &:hover {
       cursor: pointer;
       background-color: $hoverCheckbox;

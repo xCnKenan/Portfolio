@@ -11,6 +11,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
 
+  privacyPolicyAccepted = false;
 
   constructor() {}
 
@@ -24,5 +25,11 @@ export class ContactComponent {
     if (ngForm.valid && ngForm.submitted) {
       console.log(this.contactData);
     }
+  }
+
+  toggleStatus(){
+    this.privacyPolicyAccepted = !this.privacyPolicyAccepted;
+    console.log("privacy policy accepted", this.privacyPolicyAccepted);
+    
   }
 }

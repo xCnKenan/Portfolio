@@ -130,13 +130,14 @@
         </div>
 
         <div class="confirm">
-          <img class="default" src="./assets/icons/default.png" alt="" />
-          <img class="checked" src="./assets/icons/checked.png" alt="" />
+          <div class="checkStatus" (click)="toggleStatus()">
+            <img class="iconStatus" [src]="privacyPolicyAccepted ? './assets/icons/checked.png': './assets/icons/default.png'"/>
+          </div>
           <span
             >I´ve read the
             <a href="#" class="privacyPolicy">privacy policy</a>
-            and agree to the processing of my data as outlined.</span
-          >
+            and agree to the processing of my data as outlined.
+          </span>
         </div>
 
         <button class="button" type="submit">Send message :)</button>
