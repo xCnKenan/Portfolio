@@ -19,7 +19,7 @@
     </div>
 
     <div class="contactForm">
-      <form class="form" action="/action_page.php">
+      <form class="form" (ngSubmit)="onSubmit()">
         <!-- <label for="fname">First Name</label> -->
         <input
           type="text"
@@ -27,6 +27,7 @@
           id="name"
           name="name"
           placeholder="Your name"
+          [(ngModel)]="contactData.name"
         />
 
         <!-- <label for="lname">Last Name</label> -->
@@ -36,6 +37,7 @@
           name="email"
           class="email"
           placeholder="Your email"
+          [(ngModel)]="contactData.email"
         />
 
         <!-- <label for="subject">Subject</label> -->
@@ -44,6 +46,7 @@
           class="message"
           name="subject"
           placeholder="Your message"
+          [(ngModel)]="contactData.message"
         ></textarea>
 
         <div class="confirm">
